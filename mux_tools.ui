@@ -1,0 +1,2089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>STA_database_query</class>
+ <widget class="QMainWindow" name="STA_database_query">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>黑体</family>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>小单制造辅助工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_14">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>II采比对参数设置</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,0,0">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <spacer name="horizontalSpacer_12">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <widget class="QLabel" name="lb_wo">
+                  <property name="text">
+                   <string>软件版本：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>82</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_aproval_no">
+                  <property name="text">
+                   <string>芯片代码：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>82</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_prod_qty">
+                  <property name="text">
+                   <string>厂商代码：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>82</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_guy_send">
+                  <property name="text">
+                   <string>版本日期：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_guy_receive">
+                  <property name="text">
+                   <string>外部版本：</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <widget class="QLineEdit" name="le_version_sw_II">
+                  <property name="text">
+                   <string>V04S01LGWT0400</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_chipcode_II">
+                  <item>
+                   <property name="text">
+                    <string>03</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>01</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_vendor_code_II">
+                  <item>
+                   <property name="text">
+                    <string>65</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>BD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>BG</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>BW</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>CL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>CY</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>DW</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>ES</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>FC</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>GD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>GY</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HB</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HR</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HT</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HY</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JC</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JF</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JH</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JN</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JR</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>KD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>LD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>LN</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NK</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NZ</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>PH</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>RS</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SS</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SX</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>TC</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>TX</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>WE</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>WN</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>WS</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>XJ</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>XL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>YD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>YH</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>ZN</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="le_date_sw_II">
+                  <property name="text">
+                   <string>190924</string>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_ext_version_II">
+                  <item>
+                   <property name="text">
+                    <string>0002</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0001</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0090</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0121</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0151</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0181</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0211</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0270</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0301</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0331</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0361</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0421</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0451</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0481</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0541</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0570</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0600</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0630</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1090</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2090</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2181</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2541</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0212</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0101</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0151</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0482</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0302</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0452</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0122</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0182</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1091</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0091</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2091</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0631</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0661</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0062</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_13">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_save_II">
+              <property name="text">
+               <string>保存</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>II采对应关系导出</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QLabel" name="lb_start_datetime_II">
+                <property name="text">
+                 <string>开始测试时间：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="lb_id_II">
+                <property name="text">
+                 <string>首ID倒数5个字符：</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QDateTimeEdit" name="value_start_datetime_II">
+                <property name="maximumDateTime">
+                 <datetime>
+                  <hour>23</hour>
+                  <minute>59</minute>
+                  <second>59</second>
+                  <year>9999</year>
+                  <month>12</month>
+                  <day>31</day>
+                 </datetime>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="value_id_II">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>点击查询自动填入</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <widget class="QLabel" name="lb_order_II">
+                <property name="text">
+                 <string>派工单号：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="lb_prod_type_II">
+                <property name="text">
+                 <string>产品型态：</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <widget class="QLineEdit" name="value_order_II">
+                <property name="text">
+                 <string>X202003</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="cb_prod_type_II">
+                <item>
+                 <property name="text">
+                  <string>II型采集器</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>单相表</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>13版三相表</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>13版集中器</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>09版三相表</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>09版集中器</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>I型采集器</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_II">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget_II">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>8</verstretch>
+           </sizepolicy>
+          </property>
+          <column>
+           <property name="text">
+            <string>芯片ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>模块ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>测试时间</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <spacer name="horizontalSpacer_16">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_17">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_18">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_cfg_query_II">
+            <property name="text">
+             <string>参数查询</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_19">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_id_query_II">
+            <property name="text">
+             <string>ID查询</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_20">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_export_id_II">
+            <property name="text">
+             <string>导出ID</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_21">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_exit_II">
+            <property name="text">
+             <string>退出</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>三相比对参数设置</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_18">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_15">
+          <item>
+           <spacer name="verticalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0,0,0">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <spacer name="horizontalSpacer_22">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <item>
+                 <widget class="QLabel" name="lb_wo_2">
+                  <property name="text">
+                   <string>软件版本：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_13">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>82</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_aproval_no_2">
+                  <property name="text">
+                   <string>芯片代码：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_14">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>82</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_prod_qty_2">
+                  <property name="text">
+                   <string>厂商代码：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_15">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>82</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_guy_send_2">
+                  <property name="text">
+                   <string>版本日期：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_16">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_guy_receive_2">
+                  <property name="text">
+                   <string>外部版本：</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_23">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_17">
+                <item>
+                 <widget class="QLineEdit" name="le_version_sw_III">
+                  <property name="text">
+                   <string>V04S01LGWT0200</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_17">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_chipcode_III">
+                  <item>
+                   <property name="text">
+                    <string>03</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>01</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_18">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_vendor_code_III">
+                  <item>
+                   <property name="text">
+                    <string>65</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>BD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>BG</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>BW</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>CL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>CY</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>DW</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>ES</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>FC</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>GD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>GY</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HB</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HR</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HT</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HY</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JC</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JF</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JH</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JN</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>JR</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>KD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>LD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>LN</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NK</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NZ</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>PH</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>RS</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SS</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SX</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>TC</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>TX</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>WE</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>WN</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>WS</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>XJ</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>XL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>YD</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>YH</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>ZN</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_19">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="le_date_sw_III">
+                  <property name="text">
+                   <string>190924</string>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_20">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>182</width>
+                    <height>27</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_ext_version_III">
+                  <item>
+                   <property name="text">
+                    <string>0002</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0001</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0090</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0121</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0151</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0181</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0211</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0270</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0301</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0331</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0361</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0421</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0451</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0481</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0541</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0570</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0600</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0630</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1090</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2090</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2181</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2541</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0212</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0101</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0151</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0482</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0302</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0452</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0122</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0182</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1091</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0091</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2091</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0631</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0661</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0062</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_24">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_21">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <item>
+             <spacer name="horizontalSpacer_25">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_save_III">
+              <property name="text">
+               <string>保存</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_26">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_22">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>三相对应关系导出</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <widget class="QLabel" name="lb_start_datetime_III">
+                <property name="text">
+                 <string>开始测试时间：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="lb_id_III">
+                <property name="text">
+                 <string>首ID倒数5个字符：</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QDateTimeEdit" name="value_start_datetime_III">
+                <property name="maximumDateTime">
+                 <datetime>
+                  <hour>23</hour>
+                  <minute>59</minute>
+                  <second>59</second>
+                  <year>9999</year>
+                  <month>12</month>
+                  <day>31</day>
+                 </datetime>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="value_id_III">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>点击查询自动填入</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLabel" name="lb_order_III">
+                <property name="text">
+                 <string>派工单号：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="lb_prod_type_III">
+                <property name="text">
+                 <string>产品型态：</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QLineEdit" name="value_order_III">
+                <property name="text">
+                 <string>X202003</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="cb_prod_type_III">
+                <item>
+                 <property name="text">
+                  <string>13版三相表</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>单相表</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>13版集中器</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>09版三相表</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>09版集中器</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>I型采集器</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>II型采集器</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_III">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget_III">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>8</verstretch>
+           </sizepolicy>
+          </property>
+          <column>
+           <property name="text">
+            <string>芯片ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>模块ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>测试时间</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_cfg_query_III">
+            <property name="text">
+             <string>参数查询</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_id_query_III">
+            <property name="text">
+             <string>ID查询</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_export_id_III">
+            <property name="text">
+             <string>导出ID</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_exit_III">
+            <property name="text">
+             <string>退出</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
