@@ -47,9 +47,9 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         )
         # 数据库路径
         # 生产路径
-        db_file_III = r"C:\Users\Dream\Desktop\更新带屏读ID软件\最新读ID(带屏)Debug  20190621\Debug带瓶的\MyProtocol.db"
+        # db_file_III = r"C:\Users\Dream\Desktop\更新带屏读ID软件\最新读ID(带屏)Debug  20190621\Debug带瓶的\MyProtocol.db"
         # 测试路径
-        # db_file_III = r"MyProtocol.db"
+        db_file_III = r"MyProtocol.db"
         # 创建数据库连接对象
         self.conn_III = sqlite3.connect(db_file_III)
         # 创建游标对象
@@ -79,9 +79,9 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         )
         # 数据库路径
         # 生产路径
-        db_file_II = r"C:\Users\Dream\Desktop\II采同时写模块ID和逻辑地址\Debug\MyProtocol.db"
+        # db_file_II = r"C:\Users\Dream\Desktop\II采同时写模块ID和逻辑地址\Debug\MyProtocol.db"
         # 测试路径
-        # db_file_II = r"MyProtocol.db"
+        db_file_II = r"MyProtocol.db"
         # 创建数据库连接对象
         self.conn_II = sqlite3.connect(db_file_II)
         # 创建游标对象
@@ -172,9 +172,9 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.conf_III = configparser.ConfigParser()
         # 配置文件的绝对路径
         # 生产路径
-        self.conf_path_III = r"C:\Users\Dream\Desktop\更新带屏读ID软件\最新读ID(带屏)Debug  20190621\Debug带瓶的\IniFile\FiterParam.ini"
+        # self.conf_path_III = r"C:\Users\Dream\Desktop\更新带屏读ID软件\最新读ID(带屏)Debug  20190621\Debug带瓶的\IniFile\FiterParam.ini"
         # 测试路径
-        # self.conf_path_III = r"FiterParam.ini"
+        self.conf_path_III = r"FiterParam.ini"
         # 读取配置文件
         self.conf_III.read(self.conf_path_III)
         # 返回section中option的值
@@ -273,9 +273,9 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.conf_II = configparser.ConfigParser()
         # 配置文件的绝对路径
         # 生产路径
-        self.conf_path_II = r"C:\Users\Dream\Desktop\II采同时写模块ID和逻辑地址\Debug\IniFile\FiterParam.ini"
+        # self.conf_path_II = r"C:\Users\Dream\Desktop\II采同时写模块ID和逻辑地址\Debug\IniFile\FiterParam.ini"
         # 测试路径
-        # self.conf_path_II = r"FiterParam.ini"
+        self.conf_path_II = r"FiterParam.ini"
         # 读取配置文件
         self.conf_II.read(self.conf_path_II)
         # 返回section中option的值

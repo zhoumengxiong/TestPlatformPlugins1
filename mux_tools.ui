@@ -17,7 +17,11 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>小单制造辅助工具</string>
+   <string>小单制造辅助工具V1.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="apprcc.qrc">
+    <normaloff>:/pic/resources/Mac_Finder_256px_1180091_easyicon.net.png</normaloff>:/pic/resources/Mac_Finder_256px_1180091_easyicon.net.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -2084,6 +2088,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="apprcc.qrc"/>
+ </resources>
  <connections/>
 </ui>
