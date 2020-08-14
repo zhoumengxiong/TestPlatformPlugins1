@@ -1,17 +1,13 @@
 ﻿# -*- coding: utf-8 -*-
 """
 开发者：周梦雄
-最后更新日期：2020/3/24
+最后更新日期：2020/8/13
 """
 import sys
 import os
 from PyQt5.QtWidgets import (
-    QApplication,
-    QWidget,
-    QInputDialog,
-    QDateEdit,
+    QApplication, QListWidget, QListWidgetItem,
     QMainWindow,
-    QTableWidget,
     QMessageBox,
     QTableWidgetItem,
     QAbstractItemView,
@@ -21,7 +17,8 @@ from PyQt5.QtCore import QDateTime
 import sqlite3
 from openpyxl import Workbook
 import configparser
-import pyodbc
+from configuration_sqlite3 import *
+from datetime import datetime
 
 
 class MyMainWindow(QMainWindow, Ui_STA_database_query):
@@ -30,7 +27,30 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.setupUi(self)
         # 设置默认产品型态
         # self.cb_prod_type_III.setCurrentIndex(1)
-
+        software_version_all = session.query(
+            SoftwareVersion.software_version).all()
+        customer_version_all = session.query(
+            CustomerVersion.customer_version).all()
+        vendor_code_all = session.query(VendorCode.vendor_code).all()
+        software_date_all = session.query(SoftwareDate.software_date).all()
+        software_version_all_list = [e[0] for e in software_version_all]
+        customer_version_all_list = [e[0] for e in customer_version_all]
+        vendor_code_all_list = [e[0] for e in vendor_code_all]
+        software_date_all_list = [e[0] for e in software_date_all]
+        self.cb_version_sw_II.addItems(software_version_all_list)
+        self.cb_vendor_code_II.addItems(vendor_code_all_list)
+        self.cb_date_sw_II.addItems(software_date_all_list)
+        self.cb_ext_version_II.addItems(customer_version_all_list)
+        self.cb_version_sw_III.addItems(software_version_all_list)
+        self.cb_vendor_code_III.addItems(vendor_code_all_list)
+        self.cb_date_sw_III.addItems(software_date_all_list)
+        self.cb_ext_version_III.addItems(customer_version_all_list)
+        # 设置派工单默认前缀
+        datetime_now_str = str(datetime.now())
+        self.value_order_II.setText(
+            'X' + datetime_now_str[:4] + datetime_now_str[5:7])
+        self.value_order_III.setText(
+            'X' + datetime_now_str[:4] + datetime_now_str[5:7])
         # 三相初始化
         self.tableWidget_III.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.tableWidget_III.setColumnCount(3)
@@ -45,6 +65,7 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.statusbar.setStyleSheet(
             "* { color: #FF6666;font-size:30px;font-weight:bold;}"
         )
+        self.listWidget.setSpacing(7)
         # 数据库路径
         # 生产路径
         # db_file_III = r"C:\Users\Dream\Desktop\更新带屏读ID软件\最新读ID(带屏)Debug  20190621\Debug带瓶的\MyProtocol.db"
@@ -58,7 +79,8 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.sqlstring_III = r"SELECT ChipID,ModID,TTime FROM DataBackUp where ChipID<>'' and TTime>=? order by TTime asc;"
         self.btn_exit_III.clicked.connect(self.buttonExit_III)
         self.btn_id_query_III.clicked.connect(self.click_query_III)
-        self.value_start_datetime_III.dateTimeChanged.connect(self.on_datetime_changed_III)
+        self.value_start_datetime_III.dateTimeChanged.connect(
+            self.on_datetime_changed_III)
         self.btn_export_id_III.clicked.connect(self.export_id_to_excel_III)
         self.btn_cfg_query_III.clicked.connect(self.NV_query_III)
         self.btn_save_III.clicked.connect(self.write_ini_III)
@@ -90,10 +112,15 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.sqlstring_II = r"SELECT ChipIDRead,AssetIDWrite,sTime FROM ResultData where ChipIDRead<>''"
         self.btn_exit_II.clicked.connect(self.buttonExit_II)
         self.btn_id_query_II.clicked.connect(self.click_query_II)
-        self.value_start_datetime_II.dateTimeChanged.connect(self.on_datetime_changed_II)
+        self.value_start_datetime_II.dateTimeChanged.connect(
+            self.on_datetime_changed_II)
         self.btn_export_id_II.clicked.connect(self.export_id_to_excel_II)
         self.btn_cfg_query_II.clicked.connect(self.NV_query_II)
         self.btn_save_II.clicked.connect(self.write_ini_II)
+        self.btn_software_version.clicked.connect(self.add_software_version)
+        self.btn_customer_version.clicked.connect(self.add_customer_version)
+        self.btn_vendor_code.clicked.connect(self.add_vendor_code)
+        self.btn_software_date.clicked.connect(self.add_date)
 
         self.show()
 
@@ -179,21 +206,32 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.conf_III.read(self.conf_path_III)
         # 返回section中option的值
         self.NV_configure_III = "软件版本：%s 芯片代码：%s 版本日期：%s 外部版本：%s 厂商代码：%s" % (
-            self.conf_III.get("ErJiBiDui", "Value1"), self.conf_III.get("ErJiBiDui", "Value2"), self.conf_III.get("ErJiBiDui", "Value3"), self.conf_III.get("ErJiBiDui", "Value4"), self.conf_III.get("ErJiBiDui", "Value5"))
+            self.conf_III.get("ErJiBiDui", "Value1"), self.conf_III.get(
+                "ErJiBiDui", "Value2"),
+            self.conf_III.get("ErJiBiDui", "Value3"), self.conf_III.get(
+                "ErJiBiDui", "Value4"),
+            self.conf_III.get("ErJiBiDui", "Value5"))
         self.textBrowser_III.setText("")
         self.textBrowser_III.append(self.NV_configure_III)
 
     def write_ini_III(self):
         config = configparser.ConfigParser()
-        path_name = r"C:\Users\Dream\Desktop\更新带屏读ID软件\最新读ID(带屏)Debug  20190621\Debug带瓶的\IniFile\FiterParam.ini"
+        # 生产路径
+        # path_name = r"C:\Users\Dream\Desktop\更新带屏读ID软件\最新读ID(带屏)Debug  20190621\Debug带瓶的\IniFile\FiterParam.ini"
+        # 测试路径
+        path_name = r"FiterParam.ini"
         config.read(path_name)  # 读文件
         section = r"ErJiBiDui"
         # 新增/修改配置文件的键值
-        config.set(section, 'Value1', self.le_version_sw_III.text())
+        if len(self.cb_version_sw_III.currentText()) == 14:
+            config.set(section, 'Value1',
+                       self.cb_version_sw_III.currentText()[0:11] + '200')
+        else:
+            config.set(section, 'Value1', self.cb_version_sw_III.currentText())
         config.set(section, 'Value2', self.cb_chipcode_III.currentText())
-        config.set(section, 'Value3', self.le_date_sw_III.text())
+        config.set(section, 'Value3', self.cb_date_sw_III.currentText())
         config.set(section, 'Value4', (self.cb_ext_version_III.currentText()[
-                   2:]+self.cb_ext_version_III.currentText()[:2]))
+                                       2:] + self.cb_ext_version_III.currentText()[:2]))
         config.set(section, 'Value5', self.cb_vendor_code_III.currentText())
         with open(path_name, 'w') as configfile:
             config.write(configfile)
@@ -231,7 +269,8 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
             self.tableWidget_II.resizeColumnsToContents()
             self.tableWidget_II.resizeRowsToContents()
             self.textBrowser_II.setText("")
-            self.textBrowser_II.append("SELECT ChipID,ModID,TTime FROM ResultData where ChipID<>'';")
+            self.textBrowser_II.append(
+                "SELECT ChipID,ModID,TTime FROM ResultData where ChipID<>'';")
             print("find button pressed")
         except Exception:
             QMessageBox.warning(self, '提示：', '查询结果为空！', QMessageBox.Ok)
@@ -280,27 +319,136 @@ class MyMainWindow(QMainWindow, Ui_STA_database_query):
         self.conf_II.read(self.conf_path_II)
         # 返回section中option的值
         self.NV_configure_II = "软件版本：%s 芯片代码：%s 版本日期：%s 外部版本：%s 厂商代码：%s" % (
-            self.conf_II.get("ErJiBiDui", "Value1"), self.conf_II.get("ErJiBiDui", "Value2"), self.conf_II.get("ErJiBiDui", "Value3"), self.conf_II.get("ErJiBiDui", "Value4"), self.conf_II.get("ErJiBiDui", "Value5"))
+            self.conf_II.get("ErJiBiDui", "Value1"), self.conf_II.get(
+                "ErJiBiDui", "Value2"),
+            self.conf_II.get("ErJiBiDui", "Value3"), self.conf_II.get(
+                "ErJiBiDui", "Value4"),
+            self.conf_II.get("ErJiBiDui", "Value5"))
         self.textBrowser_II.setText("")
         self.textBrowser_II.append(self.NV_configure_II)
 
     def write_ini_II(self):
         config = configparser.ConfigParser()
-        path_name = r"C:\Users\Dream\Desktop\II采同时写模块ID和逻辑地址\Debug\IniFile\FiterParam.ini"
+        # 生产路径
+        # path_name = r"C:\Users\Dream\Desktop\II采同时写模块ID和逻辑地址\Debug\IniFile\FiterParam.ini"
+        # 测试路径
+        path_name = r"FiterParam.ini"
         config.read(path_name)  # 读文件
         section = r"ErJiBiDui"
         # 新增/修改配置文件的键值
-        config.set(section, 'Value1', self.le_version_sw_II.text())
+        if len(self.cb_version_sw_II.currentText()) == 14:
+            config.set(section, 'Value1',
+                       self.cb_version_sw_II.currentText()[0:11] + '400')
+        else:
+            config.set(section, 'Value1', self.cb_version_sw_II.currentText())
         config.set(section, 'Value2', self.cb_chipcode_II.currentText())
-        config.set(section, 'Value3', self.le_date_sw_II.text())
+        config.set(section, 'Value3', self.cb_date_sw_II.currentText())
         config.set(section, 'Value4', (self.cb_ext_version_II.currentText()[
-                   2:]+self.cb_ext_version_II.currentText()[:2]))
+                                       2:] + self.cb_ext_version_II.currentText()[:2]))
         config.set(section, 'Value5', self.cb_vendor_code_II.currentText())
         with open(path_name, 'w') as configfile:
             config.write(configfile)
         self.statusbar.setStyleSheet(
             "* { color: #00CD00;font-size:30px;font-weight:bold;}")
         self.statusbar.showMessage("配置文件修改成功！", 3000)
+
+    def closeEvent(self, event):  # 函数名固定不可变
+        reply = QtWidgets.QMessageBox.question(
+            self, u'警告', u'确认退出?', QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.No)
+        # QtWidgets.QMessageBox.question(self,u'弹窗名',u'弹窗内容',选项1,选项2)
+        if reply == QtWidgets.QMessageBox.Yes:
+            session.close()
+            event.accept()  # 关闭窗口
+        else:
+            event.ignore()  # 忽视点击X事件
+
+    def add_software_version(self):
+        if self.le_software_version.text() == '':
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "软件版本不能为空！", QMessageBox.Ok)
+        elif session.query(SoftwareVersion.software_version).filter_by(software_version=self.le_software_version.text().strip().upper()).first():
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "数据库中已存在该数据，请勿重复添加！", QMessageBox.Ok)
+        else:
+            self.cb_version_sw_II.addItem(
+                self.le_software_version.text().strip().upper())
+            self.cb_version_sw_III.addItem(
+                self.le_software_version.text().strip().upper())
+            new_software_version = SoftwareVersion(
+                software_version=self.le_software_version.text().strip().upper())
+            session.add(new_software_version)
+            session.commit()
+            self.statusbar.setStyleSheet(
+                "* { color: #00CD00;font-size:30px;font-weight:bold;}")
+            self.statusbar.showMessage("软件版本添加成功！", 3000)
+
+    def add_customer_version(self):
+        if self.le_customer_version.text() == '':
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "外部版本不能为空！", QMessageBox.Ok)
+        elif session.query(CustomerVersion.customer_version).filter_by(
+                customer_version=self.le_customer_version.text().strip()).first():
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "数据库中已存在该数据，请勿重复添加！", QMessageBox.Ok)
+        else:
+            self.cb_ext_version_II.addItem(
+                self.le_customer_version.text().strip())
+            self.cb_ext_version_III.addItem(
+                self.le_customer_version.text().strip())
+            new_customer_version = CustomerVersion(
+                customer_version=self.le_customer_version.text().strip())
+            session.add(new_customer_version)
+            session.commit()
+            self.statusbar.setStyleSheet(
+                "* { color: #00CD00;font-size:30px;font-weight:bold;}")
+            self.statusbar.showMessage("外部版本添加成功！", 3000)
+
+    def add_vendor_code(self):
+        if self.le_vendor_code.text() == '':
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "厂商代码不能为空！", QMessageBox.Ok)
+        elif session.query(VendorCode.vendor_code).filter_by(vendor_code=self.le_vendor_code.text().strip().upper()).first():
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "数据库中已存在该数据，请勿重复添加！", QMessageBox.Ok)
+        else:
+            self.cb_vendor_code_II.addItem(
+                self.le_vendor_code.text().strip().upper())
+            self.cb_vendor_code_III.addItem(
+                self.le_vendor_code.text().strip().upper())
+            new_vendor_code = VendorCode(
+                vendor_code=self.le_vendor_code.text().strip().upper())
+            session.add(new_vendor_code)
+            session.commit()
+            self.statusbar.setStyleSheet(
+                "* { color: #00CD00;font-size:30px;font-weight:bold;}")
+            self.statusbar.showMessage("厂商代码添加成功！", 3000)
+
+    def add_date(self):
+        if self.le_date.text() == '':
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "版本日期不能为空！", QMessageBox.Ok)
+        elif session.query(SoftwareDate.software_date).filter_by(software_date=self.le_date.text().strip()).first():
+            self.statusbar.clearMessage()
+            QMessageBox.warning(
+                self, "警告！", "数据库中已存在该数据，请勿重复添加！", QMessageBox.Ok)
+        else:
+            self.cb_date_sw_II.addItem(self.le_date.text().strip())
+            self.cb_date_sw_III.addItem(self.le_date.text().strip())
+            new_software_date = SoftwareDate(
+                software_date=self.le_date.text().strip())
+            session.add(new_software_date)
+            session.commit()
+            self.statusbar.setStyleSheet(
+                "* { color: #00CD00;font-size:30px;font-weight:bold;}")
+            self.statusbar.showMessage("版本日期添加成功！", 3000)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

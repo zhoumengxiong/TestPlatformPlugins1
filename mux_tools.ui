@@ -12,12 +12,14 @@
   </property>
   <property name="font">
    <font>
-    <family>黑体</family>
-    <pointsize>11</pointsize>
+    <family>Microsoft YaHei UI</family>
+    <pointsize>12</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
    </font>
   </property>
   <property name="windowTitle">
-   <string>小单制造辅助工具V1.0</string>
+   <string>小单制造辅助工具V1.1</string>
   </property>
   <property name="windowIcon">
    <iconset resource="apprcc.qrc">
@@ -27,8 +29,28 @@
    <layout class="QVBoxLayout" name="verticalLayout_14">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -178,11 +200,7 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_2">
                 <item>
-                 <widget class="QLineEdit" name="le_version_sw_II">
-                  <property name="text">
-                   <string>V04S01LGWT0400</string>
-                  </property>
-                 </widget>
+                 <widget class="QComboBox" name="cb_version_sw_II"/>
                 </item>
                 <item>
                  <spacer name="verticalSpacer">
@@ -225,218 +243,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_vendor_code_II">
-                  <item>
-                   <property name="text">
-                    <string>65</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>BD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>BG</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>BW</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>CL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>CY</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>DW</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>ES</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>FC</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>GD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>GY</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HB</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HR</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HT</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HY</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JC</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JF</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JH</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JN</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JR</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>KD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>LD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>LN</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>NK</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>NL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>NZ</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>PH</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>RS</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>SD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>SS</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>SX</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>TC</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>TX</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>WE</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>WN</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>WS</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>XJ</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>XL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>YD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>YH</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>ZN</string>
-                   </property>
-                  </item>
-                 </widget>
+                 <widget class="QComboBox" name="cb_vendor_code_II"/>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_4">
@@ -452,14 +259,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="le_date_sw_II">
-                  <property name="text">
-                   <string>190924</string>
-                  </property>
-                  <property name="placeholderText">
-                   <string/>
-                  </property>
-                 </widget>
+                 <widget class="QComboBox" name="cb_date_sw_II"/>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_6">
@@ -475,188 +275,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_ext_version_II">
-                  <item>
-                   <property name="text">
-                    <string>0002</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0001</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0090</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0121</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0151</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0181</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0211</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0270</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0301</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0331</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0361</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0421</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0451</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0481</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0541</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0570</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0600</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0630</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>1090</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2090</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2181</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2541</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0212</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0101</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0151</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0482</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0302</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0452</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0122</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0182</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>1091</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0091</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2091</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0631</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0661</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0062</string>
-                   </property>
-                  </item>
-                 </widget>
+                 <widget class="QComboBox" name="cb_ext_version_II"/>
                 </item>
                </layout>
               </item>
@@ -852,7 +471,7 @@
               <item>
                <widget class="QLineEdit" name="value_order_II">
                 <property name="text">
-                 <string>X202003</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -1199,11 +818,7 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_17">
                 <item>
-                 <widget class="QLineEdit" name="le_version_sw_III">
-                  <property name="text">
-                   <string>V04S01LGWT0200</string>
-                  </property>
-                 </widget>
+                 <widget class="QComboBox" name="cb_version_sw_III"/>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_17">
@@ -1246,218 +861,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_vendor_code_III">
-                  <item>
-                   <property name="text">
-                    <string>65</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>BD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>BG</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>BW</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>CL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>CY</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>DW</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>ES</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>FC</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>GD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>GY</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HB</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HR</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HT</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>HY</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JC</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JF</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JH</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JN</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>JR</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>KD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>LD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>LN</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>NK</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>NL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>NZ</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>PH</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>RS</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>SD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>SS</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>SX</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>TC</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>TX</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>WE</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>WN</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>WS</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>XJ</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>XL</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>YD</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>YH</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>ZN</string>
-                   </property>
-                  </item>
-                 </widget>
+                 <widget class="QComboBox" name="cb_vendor_code_III"/>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_19">
@@ -1473,14 +877,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="le_date_sw_III">
-                  <property name="text">
-                   <string>190924</string>
-                  </property>
-                  <property name="placeholderText">
-                   <string/>
-                  </property>
-                 </widget>
+                 <widget class="QComboBox" name="cb_date_sw_III"/>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_20">
@@ -1496,188 +893,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_ext_version_III">
-                  <item>
-                   <property name="text">
-                    <string>0002</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0001</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0090</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0121</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0151</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0181</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0211</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0270</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0301</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0331</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0361</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0421</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0451</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0481</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0541</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0570</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0600</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0630</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>1090</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2090</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2181</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2541</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0212</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0101</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0151</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0482</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0302</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0452</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0122</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0182</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>1091</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0091</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2091</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0631</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0661</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>0062</string>
-                   </property>
-                  </item>
-                 </widget>
+                 <widget class="QComboBox" name="cb_ext_version_III"/>
                 </item>
                </layout>
               </item>
@@ -1873,7 +1089,7 @@
               <item>
                <widget class="QLineEdit" name="value_order_III">
                 <property name="text">
-                 <string>X202003</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -2072,6 +1288,455 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>添加参数到数据库</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_5">
+        <item row="0" column="0">
+         <widget class="QListWidget" name="listWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei UI</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="midLineWidth">
+           <number>0</number>
+          </property>
+          <property name="tabKeyNavigation">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="movement">
+           <enum>QListView::Static</enum>
+          </property>
+          <property name="layoutMode">
+           <enum>QListView::SinglePass</enum>
+          </property>
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="uniformItemSizes">
+           <bool>false</bool>
+          </property>
+          <property name="selectionRectVisible">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>软件版本</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <italic>false</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+             <strikeout>false</strikeout>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>外部版本</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>厂商代码</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>版本日期</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei UI</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page">
+           <widget class="QWidget" name="widget_software_version" native="true">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>451</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <widget class="QPushButton" name="btn_software_version">
+             <property name="geometry">
+              <rect>
+               <x>11</x>
+               <y>94</y>
+               <width>93</width>
+               <height>36</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>添加</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label">
+             <property name="geometry">
+              <rect>
+               <x>12</x>
+               <y>12</y>
+               <width>100</width>
+               <height>27</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>软件版本：</string>
+             </property>
+             <property name="buddy">
+              <cstring>le_software_version</cstring>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="le_software_version">
+             <property name="geometry">
+              <rect>
+               <x>119</x>
+               <y>12</y>
+               <width>291</width>
+               <height>33</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>示例：V04S01LGWT0X00</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <widget class="QWidget" name="widget_customer_version" native="true">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>541</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei UI</family>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <widget class="QPushButton" name="btn_customer_version">
+             <property name="geometry">
+              <rect>
+               <x>11</x>
+               <y>94</y>
+               <width>93</width>
+               <height>36</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>添加</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="le_customer_version">
+             <property name="geometry">
+              <rect>
+               <x>119</x>
+               <y>12</y>
+               <width>291</width>
+               <height>33</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="placeholderText">
+              <string>示例：0182</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_2">
+             <property name="geometry">
+              <rect>
+               <x>12</x>
+               <y>12</y>
+               <width>100</width>
+               <height>27</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>外部版本：</string>
+             </property>
+             <property name="buddy">
+              <cstring>le_customer_version</cstring>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_3">
+           <widget class="QWidget" name="widget_vendor_code" native="true">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>461</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <widget class="QPushButton" name="btn_vendor_code">
+             <property name="geometry">
+              <rect>
+               <x>11</x>
+               <y>94</y>
+               <width>93</width>
+               <height>36</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>添加</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>12</x>
+               <y>12</y>
+               <width>100</width>
+               <height>27</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>厂商代码：</string>
+             </property>
+             <property name="buddy">
+              <cstring>le_vendor_code</cstring>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="le_vendor_code">
+             <property name="geometry">
+              <rect>
+               <x>119</x>
+               <y>12</y>
+               <width>291</width>
+               <height>33</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>示例：WE</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_4">
+           <widget class="QWidget" name="widget_date" native="true">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>481</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <widget class="QPushButton" name="btn_software_date">
+             <property name="geometry">
+              <rect>
+               <x>11</x>
+               <y>94</y>
+               <width>93</width>
+               <height>36</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>添加</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_4">
+             <property name="geometry">
+              <rect>
+               <x>12</x>
+               <y>12</y>
+               <width>100</width>
+               <height>27</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>版本日期：</string>
+             </property>
+             <property name="buddy">
+              <cstring>le_date</cstring>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="le_date">
+             <property name="geometry">
+              <rect>
+               <x>119</x>
+               <y>12</y>
+               <width>291</width>
+               <height>33</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>示例：190924</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -2082,7 +1747,7 @@
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>26</height>
+     <height>33</height>
     </rect>
    </property>
   </widget>
@@ -2091,5 +1756,22 @@
  <resources>
   <include location="apprcc.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
