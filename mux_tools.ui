@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
+    <width>1366</width>
     <height>768</height>
    </rect>
   </property>
@@ -43,14 +43,17 @@
       <property name="currentIndex">
        <number>2</number>
       </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
       <property name="tabsClosable">
        <bool>false</bool>
       </property>
       <property name="movable">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
       <property name="tabBarAutoHide">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -93,6 +96,20 @@
                <layout class="QVBoxLayout" name="verticalLayout">
                 <item>
                  <widget class="QLabel" name="lb_wo">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>软件版本：</string>
                   </property>
@@ -113,6 +130,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_aproval_no">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>芯片代码：</string>
                   </property>
@@ -133,6 +164,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_prod_qty">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>厂商代码：</string>
                   </property>
@@ -153,6 +198,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_guy_send">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>版本日期：</string>
                   </property>
@@ -173,6 +232,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_guy_receive">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>外部版本：</string>
                   </property>
@@ -200,7 +273,22 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_2">
                 <item>
-                 <widget class="QComboBox" name="cb_version_sw_II"/>
+                 <widget class="QComboBox" name="cb_version_sw_II">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <spacer name="verticalSpacer">
@@ -217,6 +305,20 @@
                 </item>
                 <item>
                  <widget class="QComboBox" name="cb_chipcode_II">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <item>
                    <property name="text">
                     <string>03</string>
@@ -243,7 +345,22 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_vendor_code_II"/>
+                 <widget class="QComboBox" name="cb_vendor_code_II">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_4">
@@ -259,7 +376,22 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_date_sw_II"/>
+                 <widget class="QComboBox" name="cb_date_sw_II">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_6">
@@ -275,7 +407,22 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_ext_version_II"/>
+                 <widget class="QComboBox" name="cb_ext_version_II">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -326,6 +473,20 @@
             </item>
             <item>
              <widget class="QPushButton" name="btn_save_II">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>保存</string>
               </property>
@@ -434,6 +595,20 @@
            </spacer>
           </item>
           <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>审批编号：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_approval_no_ii">
+            <property name="placeholderText">
+             <string>填入审批编号后6位</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_15">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -479,37 +654,27 @@
                <widget class="QComboBox" name="cb_prod_type_II">
                 <item>
                  <property name="text">
-                  <string>II型采集器</string>
+                  <string>通信单元（单相/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>单相表</string>
+                  <string>通信单元（三相/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>13版三相表</string>
+                  <string>通信单元（集中器I型/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>13版集中器</string>
+                  <string>通信单元（I采/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>09版三相表</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>09版集中器</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>I型采集器</string>
+                  <string>II型采集器（HPLC）</string>
                  </property>
                 </item>
                </widget>
@@ -601,6 +766,12 @@
           </item>
           <item>
            <widget class="QPushButton" name="btn_cfg_query_II">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>参数查询</string>
             </property>
@@ -621,6 +792,12 @@
           </item>
           <item>
            <widget class="QPushButton" name="btn_id_query_II">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>ID查询</string>
             </property>
@@ -641,6 +818,12 @@
           </item>
           <item>
            <widget class="QPushButton" name="btn_export_id_II">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>导出ID</string>
             </property>
@@ -660,9 +843,24 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="btn_exit_II">
+           <widget class="QPushButton" name="btn_upload_ii">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
-             <string>退出</string>
+             <string>上传数据库</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -711,6 +909,20 @@
                <layout class="QVBoxLayout" name="verticalLayout_16">
                 <item>
                  <widget class="QLabel" name="lb_wo_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>软件版本：</string>
                   </property>
@@ -731,6 +943,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_aproval_no_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>芯片代码：</string>
                   </property>
@@ -751,6 +977,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_prod_qty_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>厂商代码：</string>
                   </property>
@@ -771,6 +1011,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_guy_send_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>版本日期：</string>
                   </property>
@@ -791,6 +1045,20 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_guy_receive_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>外部版本：</string>
                   </property>
@@ -818,7 +1086,22 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_17">
                 <item>
-                 <widget class="QComboBox" name="cb_version_sw_III"/>
+                 <widget class="QComboBox" name="cb_version_sw_III">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_17">
@@ -835,6 +1118,20 @@
                 </item>
                 <item>
                  <widget class="QComboBox" name="cb_chipcode_III">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <item>
                    <property name="text">
                     <string>03</string>
@@ -861,7 +1158,22 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_vendor_code_III"/>
+                 <widget class="QComboBox" name="cb_vendor_code_III">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_19">
@@ -877,7 +1189,22 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_date_sw_III"/>
+                 <widget class="QComboBox" name="cb_date_sw_III">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <spacer name="verticalSpacer_20">
@@ -893,7 +1220,22 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="cb_ext_version_III"/>
+                 <widget class="QComboBox" name="cb_ext_version_III">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Microsoft YaHei UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -944,6 +1286,20 @@
             </item>
             <item>
              <widget class="QPushButton" name="btn_save_III">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>保存</string>
               </property>
@@ -1052,6 +1408,20 @@
            </spacer>
           </item>
           <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>审批编号：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_approval_no_iii">
+            <property name="placeholderText">
+             <string>填入审批编号后6位</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_9">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -1097,37 +1467,27 @@
                <widget class="QComboBox" name="cb_prod_type_III">
                 <item>
                  <property name="text">
-                  <string>13版三相表</string>
+                  <string>通信单元（单相/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>单相表</string>
+                  <string>通信单元（三相/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>13版集中器</string>
+                  <string>通信单元（集中器I型/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>09版三相表</string>
+                  <string>通信单元（I采/HPLC）</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>09版集中器</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>I型采集器</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>II型采集器</string>
+                  <string>II型采集器（HPLC）</string>
                  </property>
                 </item>
                </widget>
@@ -1219,6 +1579,12 @@
           </item>
           <item>
            <widget class="QPushButton" name="btn_cfg_query_III">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>参数查询</string>
             </property>
@@ -1239,6 +1605,12 @@
           </item>
           <item>
            <widget class="QPushButton" name="btn_id_query_III">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>ID查询</string>
             </property>
@@ -1259,6 +1631,12 @@
           </item>
           <item>
            <widget class="QPushButton" name="btn_export_id_III">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>导出ID</string>
             </property>
@@ -1278,9 +1656,15 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="btn_exit_III">
+           <widget class="QPushButton" name="btn_upload_iii">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
-             <string>退出</string>
+             <string>上传数据库</string>
             </property>
            </widget>
           </item>
@@ -1435,7 +1819,7 @@
            <enum>QFrame::Sunken</enum>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="page">
            <widget class="QWidget" name="widget_software_version" native="true">
@@ -1455,6 +1839,12 @@
                <width>93</width>
                <height>36</height>
               </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
              <property name="font">
               <font>
@@ -1746,7 +2136,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1024</width>
+     <width>1366</width>
      <height>33</height>
     </rect>
    </property>
